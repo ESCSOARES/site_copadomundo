@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: catar1;
+    src: url(font/Graphik\ Arabic\ Medium.otf);
+}
+
+@font-face {
+    font-family: catar2;
+    src: url(font/Qatar2022Arabic-Bold.ttf);
+}
+@font-face {
+    font-family: catar3;
+    src: url(font/Qatar2022Arabic-Heavy.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+        --cor1: #9C163C;
+        --cor2: #BF889C;
+        --cor3: #400621;
+        --cor4: #260216;
+        --cor5: #F2F2F2;
+
+        --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+        --fonte-destaque: "catar1", cursvei;
+}
+
+header {
+    display: flex;
+    background-color: black;
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+}
+
+
+.container-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-imagem {
+    height: 60px;
+    width: 60px;
+    background-color: #400621;
+    background: url(images/fifa-world-cup-qatar-2022.svg) no-repeat;
+
+}
+
+.logo-texto {
+    color: white;
+    text-transform: uppercase;
+    font-family: catar1;
+    margin-left: 30px;
+    padding-bottom: 7px;
+}
+
+.container-flex {
+    height: 35px;
+    font-family: catar3;
+    text-transform: uppercase;
+    background-color: black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.item-flex {
+    height: 64%;
+    padding: 17px;
+    text-decoration: none;
+    color: white;
+}
+
+.item-flex:hover {
+    color: var(--cor1)
+}
+
+body {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+
+main h2, h3, p {
+    margin: 25px 30px;
+}
+
+main p {
+    font-family: var(--fonte-padrao);
+    margin-left: 50px;
+}
+
+main h2 {
+    font-family: var(--fonte-destaque);
+    text-transform: uppercase;
+}
+
+main ul, ol {
+    list-style-position: inside;
+    columns: 2;
+    text-indent: 40px;
+    font-family: catar1;
+    font-size: 1.2em;
+}
+
+main h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: catar2;
+}
+
+
+.one-column {
+    font-family: catar2;
+    font-size: 1.2em;
+    columns: 1;
+    margin: 30px 0;
+    text-transform: uppercase;
+}
+
+.galeria {
+    display: flex;
+    position: relative;
+    margin-left: 35px;
+    margin-right: 35px;
+    justify-content: center;
+}
+.img {
+    height: 350px;
+    width: 750px;
+    max-width: 800px;
+    min-width: 350px;
+    border-radius: 14px;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.315);
+}
+
+footer {
+    font-family: catar2;
+    background-color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    height: 20px;
+    padding: 10px;
+    margin-top: 90px;
+}
+
+.content{
+    display:flex; 
+    margin: 30px auto;
+}
+
+.rTable{    
+    box-sizing: border-box;
+    width: 100%; 
+    text-align: center;
+
+    font-family: catar1;
+    text-transform: uppercase;
+}
+
+    .rTable th{background: black; font-weight: bold; color:#fff;}
+    .rTable tr:nth-child(2n){background: #ccc;}
+    .rTable th, .rTable td{padding: 7px 0;}
+
+@media screen and (max-width: 480px){
+    .content{width: 94%;}
+
+    .rTable th{display:none;}
+    .rTable tr td{display: flex; flex-direction: column; }
+}
+
+@media only screen and (min-width: 1200px){
+    .content{width:100%;}
+    .rTable tr td:nth-child(1){width:10%;}
+    .rTable tr td:nth-child(2){width:30%;}
+    .rTable tr td:nth-child(3){width:20%;}
+    .rTable tr td:nth-child(4){width:10%;}
+    .rTable tr td:nth-child(5){width:30%;}
+}
